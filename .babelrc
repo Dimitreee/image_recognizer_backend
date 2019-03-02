@@ -1,0 +1,20 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "node": "current"
+      }
+    }]
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "^/(.+)": "./src/\\1",
+        "^CONFIG/(.+)": "./config/\\1"
+      }
+    }],
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/proposal-do-expressions",
+    "@babel/proposal-export-default-from"
+  ]
+}
